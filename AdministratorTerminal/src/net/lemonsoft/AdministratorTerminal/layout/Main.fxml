@@ -1,0 +1,180 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="net.lemonsoft.AdministratorTerminal.viewController.MainViewController">
+    <HBox styleClass="operateBox">
+        <Button onMouseClicked="#addTask" text="添加任务"/>
+        <Button onMouseClicked="#addTask" text="推送通知"/>
+    </HBox>
+    <TabPane fx:id="rootTabPane">
+        <Tab closable="false" text="任务管理">
+            <content>
+                <VBox>
+                    <HBox styleClass="operateBox">
+                        <Label text="请您要查看任务列表的起始日期:"/>
+                        <DatePicker fx:id="task_filter_dateStart"/>
+                        <Label text="结束日期:"/>
+                        <DatePicker fx:id="task_filter_dateEnd"/>
+                        <Button text="查询" onMouseClicked="#refreshTaskState"/>
+                    </HBox>
+                    <HBox styleClass="operateBox">
+                        <Button text="查看任务状态" fx:id="task_operate_queryInfo" disable="true"/>
+                    </HBox>
+                    <TableView fx:id="task_tableView">
+                        <columns>
+                            <TableColumn text="任务指纹" minWidth="320">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="taskFingerprint"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="任务名称" minWidth="210">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="taskName"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="发布时间" minWidth="160">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="taskPublishTime"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="状态" minWidth="80">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="taskState"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="采集端IP" minWidth="80">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="clientIp"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                    <HBox styleClass="pageBox">
+                        <Button text="前一页" fx:id="task_pageFrontButton" onMouseClicked="#taskFrontPage" disable="true"/>
+                        <HBox>
+                            <Label text="第"/>
+                            <ChoiceBox fx:id="task_selectPageChoiceBox" disable="true"/>
+                            <Label text="页"/>
+                            <Label fx:id="task_pageCountLabel"/>
+                        </HBox>
+                        <Button text="后一页" fx:id="task_pageNextButton" onMouseClicked="#taskNextPage" disable="true"/>
+                    </HBox>
+                </VBox>
+            </content>
+        </Tab>
+        <Tab closable="false" text="在线客户端管理">
+            <VBox>
+                <HBox styleClass="operateBox">
+                    <Button text="刷新客户端状态" onMouseClicked="#refreshClientState"/>
+                </HBox>
+                <TableView fx:id="client_tableView">
+                    <columns>
+                        <TableColumn text="IP地址" minWidth="130">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="clientIp"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="操作系统" minWidth="160">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="clientSystem"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="设备名称" minWidth="160">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="clientDeviceName"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="登录用户" minWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="userName"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="终端类型" minWidth="120">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="clientSystem"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="状态" minWidth="160">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="sessionState"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <HBox styleClass="pageBox">
+                    <Button text="前一页" fx:id="client_pageFrontButton" onMouseClicked="#clientFrontPage"/>
+                    <HBox>
+                        <Label text="第"/>
+                        <ChoiceBox fx:id="client_selectPageChoiceBox"/>
+                        <Label text="页"/>
+                        <Label fx:id="client_pageCountLabel"/>
+                    </HBox>
+                    <Button text="后一页" fx:id="client_pageNextButton" onMouseClicked="#clientNextPage"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab closable="false" text="用户管理">
+            <VBox>
+                <HBox styleClass="operateBox">
+                    <Button fx:id="user_add" text="添加用户" onMouseClicked="#addUser"/>
+                    <Button fx:id="user_refresh" text="刷新列表" onMouseClicked="#refreshUserState"/>
+                </HBox>
+                <TableView fx:id="user_tableView">
+                    <columns>
+                        <TableColumn text="姓名" minWidth="130">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="userName"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="手机号码" minWidth="160">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="userPhone"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="电子邮件" minWidth="160">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="userEmail"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="账号" minWidth="160">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="userUsername"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="用户积分" minWidth="80">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="userScore"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="用户组" minWidth="150">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="usergroupName"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <HBox styleClass="pageBox">
+                    <Button text="前一页" fx:id="user_pageFrontButton" onMouseClicked="#userFrontPage"/>
+                    <HBox>
+                        <Label text="第"/>
+                        <ChoiceBox fx:id="user_selectPageChoiceBox"/>
+                        <Label text="页"/>
+                        <Label fx:id="user_pageCountLabel"/>
+                    </HBox>
+                    <Button text="后一页" fx:id="user_pageNextButton" onMouseClicked="#userNextPage"/>
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+    <HBox styleClass="operateBox">
+        <Label fx:id="user_idLabel" text="用户信息加载中"/>
+        <Label fx:id="user_nameLabel"/>
+        <Label fx:id="user_userGroupLabel"/>
+        <Label fx:id="user_scoreLabel"/>
+        <Button fx:id="user_signOutButton" text="注销登录" onMouseClicked="#signOut"/><!-- 注销按钮 -->
+    </HBox>
+    <HBox styleClass="operateBox">
+        <Label fx:id="client_infoLabel"/>
+    </HBox>
+</FlowPane>

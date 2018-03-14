@@ -1,0 +1,39 @@
+[JS: Javscript操作 , NA: Native操作,指原生Java操作]
+
+#任务派发,客户端接收流程
+
+1.NA: 收到服务器通过长连接推送过来的任务模型
+2.NA: 数据采集终端将任务模型存放到任务执行队列中
+3.NA: 数据采集终端判断是否当前正在执行任务中,若正在执行,那么没有任何的操作,若没有正在执行任务,那么从任务队列的队头中取出一个任务模型,开始执行
+
+
+#创建采集器
+1.JS: 采集任务脚本中调用var grabber = new Grabber();
+2.JS: JS随机生成一个UUID作为采集器的指纹fingerprint,用于唯一标识采集器
+3.JS: 调用原生Api: window.grabber.create(fingerprint);
+4.NA: 在采集器池中创建一个采集器,并将传过来的fingerprint作为键,将采集器存放到池中
+
+
+#通过采集器准备采集数据: 加载URL
+1.JS: 脚本执行命令触发采集器加载指定的URL: grabber.loadURL(grabURL , timeoutInterval , successFunction , failedFunction);
+2.JS: 调用原生Api: window.grabber.loadURL(fingerprint , grabURL , timeoutInterval , successFunction , failedFunction);
+3.NA: 原生的采集器,根据浏览器控件实际加载的URL情况,自动的调用successFunction或者failedFunction
+4.JS: 被原生对应的触发了成功回调函数successFunction或者是失败的回调函数failedFunction
+        $注:所有采集数据的功能函数调用,都必须要写到loadURL的successFunction中,否则,由于是异步操作,可能会导致所有数据都采集不到
+
+
+#通过采集器开始采集数据: 加载URL之后,开始采集数据
+1.JS: 执行到数据采集命令,如: grabber.getAttribute(domSelector , attributeName , saveKey);
+2.JS: 调用原生Api: window.grabber.getAttribute(fingerprint , domSelector , attributeName , saveKey);
+3.NA: 采集器执行指定的采集方法,并将采集的结果数据(无论是采集的结果数据是数组还是基础数据还是对象)保存到数据采集池中,并以saveKey作为键进行存储
+
+
+#通过采集器采集数据成功结束之后: window.task.success()函数被调用
+1.NA: 将数据采集池中的数据格式化成JSON字符串
+2.NA: 将采集过程中所有的打印出来的日志数据,格式化成JSON字符串
+3.NA: 将格式化好的JSON数据字符串(包括采集的数据以及日志数据)通过POST请求发送给服务器端
+
+
+#通过采集器采集数据失败结束之后: window.task.error()函数被调用
+1.NA: 将采集过程中所有的打印出来的日志数据,格式化成JSON字符串
+2.NA: 将格式化好的JSON数据字符串(日志数据)通过POST请求发送给服务器端

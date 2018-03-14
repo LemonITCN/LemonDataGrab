@@ -1,0 +1,13 @@
+body{
+    padding: 10px;
+}
+
+.spinner{
+    text-align: center;
+}
+
+#addTaskButton{
+    margin: 60px auto 20px;
+    width: 70%;
+    height: 46px;
+}

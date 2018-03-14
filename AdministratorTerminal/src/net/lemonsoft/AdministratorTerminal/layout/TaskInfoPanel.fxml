@@ -1,0 +1,75 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="net.lemonsoft.AdministratorTerminal.viewController.TaskInfoPanelViewController">
+    <ScrollPane styleClass="rootScrollPane">
+        <VBox>
+            <HBox styleClass="taskStateLine">
+                <ImageView fx:id="task_line_icon_0" styleClass="icon"/>
+                <Label fx:id="task_line_title_0" text="任务创建成功，等待分发"/>
+            </HBox>
+            <HBox styleClass="taskStateLine">
+                <ImageView fx:id="task_line_icon_1" styleClass="icon"/>
+                <Label fx:id="task_line_title_1" text="任务已经放到待分发池中，准备分发"/>
+            </HBox>
+            <HBox styleClass="taskStateLine">
+                <ImageView fx:id="task_line_icon_2" styleClass="icon"/>
+                <Label fx:id="task_line_title_2" text="任务已经分发至采集终端"/>
+                <Button fx:id="task_line_detail_2" text="查看采集端信息" onMouseClicked="#querySessionInfo"/>
+            </HBox>
+            <HBox styleClass="taskStateLine">
+                <ImageView fx:id="task_line_icon_3" styleClass="icon"/>
+                <Label fx:id="task_line_title_3" text="任务采集结果回传成功"/>
+                <Button fx:id="task_line_detail_3" text="查看详情" onMouseClicked="#queryResult"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="任务ID："/>
+                <TextField disable="true" fx:id="task_idTextField"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="任务指纹："/>
+                <TextField disable="true" fx:id="task_fingerprintTextField"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="任务名称："/>
+                <TextField disable="true" fx:id="task_nameTextField"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="任务描述："/>
+                <TextArea fx:id="task_descriptionTextArea"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="分发时间:"/>
+                <DatePicker fx:id="task_publishDatePicker"/>
+                <ChoiceBox fx:id="task_publishHourChoiceBox"/>
+                <Label text="时" styleClass="itemLabel"/>
+                <ChoiceBox fx:id="task_publishMinuteChoiceBox"/>
+                <Label text="分" styleClass="itemLabel"/>
+                <ChoiceBox fx:id="task_publishSecondChoiceBox"/>
+                <Label text="秒" styleClass="itemLabel"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="采集脚本:"/>
+                <TextArea fx:id="task_scriptTextArea"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="过期时间:"/>
+                <DatePicker fx:id="task_expiredDatePicker"/>
+                <ChoiceBox fx:id="task_expiredHourChoiceBox"/>
+                <Label text="时" styleClass="itemLabel"/>
+                <ChoiceBox fx:id="task_expiredMinuteChoiceBox"/>
+                <Label text="分" styleClass="itemLabel"/>
+                <ChoiceBox fx:id="task_expiredSecondChoiceBox"/>
+                <Label text="秒" styleClass="itemLabel"/>
+            </HBox>
+            <HBox styleClass="operateBox">
+                <Label text="优先级别："/>
+                <ChoiceBox fx:id="task_levelChoiceBox"/>
+            </HBox>
+            <HBox styleClass="submitBox">
+                <Button text="修改任务信息" fx:id="submitButton" onMouseClicked="#submitUpdate"/>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</FlowPane>

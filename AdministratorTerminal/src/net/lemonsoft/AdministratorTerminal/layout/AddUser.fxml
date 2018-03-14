@@ -1,0 +1,27 @@
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Button?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="net.lemonsoft.AdministratorTerminal.viewController.AddUserViewController">
+    <HBox styleClass="formLineBox">
+        <Label text="用户账号:"/>
+        <TextField fx:id="user_numberField"/>
+    </HBox>
+    <HBox styleClass="formLineBox">
+        <Label text="真实姓名:"/>
+        <TextField fx:id="user_nameField"/>
+    </HBox>
+    <HBox styleClass="formLineBox">
+        <Label text="所属用户组:"/>
+        <ChoiceBox fx:id="user_userGroupChoiceBox"/>
+    </HBox>
+    <HBox styleClass="formLineBox">
+        <Label fx:id="user_userGroupDescriptionLabel"/>
+    </HBox>
+    <HBox styleClass="submitLineBox">
+        <Button text="添加用户" onMouseClicked="#submitAddUser"/>
+    </HBox>
+</FlowPane>

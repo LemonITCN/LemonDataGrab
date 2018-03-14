@@ -1,0 +1,16 @@
+<LK-Config>
+    <LK-Api>
+        <!-- API所属类的注册 -->
+        <apiClass>net.lemonsoft.LemonDataGrab.MainControlMachine.Api.LAClient</apiClass>
+        <apiClass>net.lemonsoft.LemonDataGrab.MainControlMachine.Api.LAUser</apiClass>
+        <apiClass>net.lemonsoft.LemonDataGrab.MainControlMachine.Api.LATask</apiClass>
+        <apiClass>net.lemonsoft.LemonDataGrab.MainControlMachine.Api.LAResult</apiClass>
+        <apiClass>net.lemonsoft.LemonDataGrab.MainControlMachine.Api.LAUserGroup</apiClass>
+    </LK-Api>
+    <LK-Task>
+        <taskRefreshTimeFront>60</taskRefreshTimeFront><!-- 任务扫描时,允许向前兼容的时间间隔 单位s -->
+        <taskRefreshTimeAfter>60</taskRefreshTimeAfter><!-- 任务扫描时,允许向后延后的时间间隔 单位s -->
+        <taskRefreshTimeInterval>30</taskRefreshTimeInterval><!-- 任务刷新扫描的时间间隔 -->
+        <taskDistributeTimeInterval>1</taskDistributeTimeInterval><!-- 任务分发扫描时间间隔,单位秒s -->
+    </LK-Task>
+</LK-Config>

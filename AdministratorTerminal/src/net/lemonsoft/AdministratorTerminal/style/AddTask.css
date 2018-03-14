@@ -1,0 +1,54 @@
+.root{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 500px;
+}
+.scroll-pane{
+    -fx-pref-width: 500px;
+    -fx-pref-height: 600px;
+}
+.lineBox{
+    -fx-padding: 10px;
+    -fx-spacing: 5px;
+}
+.lineBox .label{
+    -fx-pref-height: 23px;
+}
+.lineBox .text-field{
+    -fx-pref-height: 32px;
+    -fx-pref-width: 460px;
+}
+.lineBox .text-area{
+    -fx-pref-width: 460px;
+    -fx-pref-height: 100px;
+}
+.lineBox .date-picker{
+    -fx-pref-width: 160px;
+    -fx-pref-height: 32px;
+}
+.lineBox .publishBox{
+    -fx-spacing: 10px;
+    -fx-alignment: baseline-left;
+}
+.lineBox .choice-box{
+    -fx-pref-height: 32px;
+    -fx-pref-width: 60px;
+}
+#repeatCountTextField{
+    -fx-pref-width: 100px;
+}
+#executeCodeTextArea{
+    -fx-pref-height: 200px;
+}
+#theTopToggleSwitch{
+    -fx-cursor: hand;
+}
+#commitBox{
+    -fx-pref-width: 400px;
+    -fx-padding: 20px;
+    -fx-alignment: baseline-center;
+}
+#addTaskButton{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 36px;
+    -fx-cursor: hand;
+}

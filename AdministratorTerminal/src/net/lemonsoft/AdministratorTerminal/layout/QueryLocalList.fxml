@@ -1,0 +1,36 @@
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="net.lemonsoft.AdministratorTerminal.viewController.QueryLocalListViewController"
+           fx:id="rootPane">
+    <VBox>
+        <HBox styleClass="operateBox">
+        </HBox>
+        <TableView fx:id="mainTableView">
+            <columns>
+                <TableColumn text="任务名称" minWidth="200">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="taskName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="任务发布时间" minWidth="300">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="taskPublishTime"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="任务指纹" minWidth="300">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="taskFingerprint"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Label text="正在向指定的数据采集终端发送指令，请稍候..." fx:id="waitLabel"/>
+    </VBox>
+</StackPane>

@@ -1,0 +1,65 @@
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="net.lemonsoft.AdministratorTerminal.viewController.ResultInfoViewController">
+    <VBox>
+        <HBox styleClass="operateBox">
+            <Button text="导出数据-CSV文件" onMouseClicked="#exportDataCSV"/>
+            <Button text="导出数据-JSON文件" onMouseClicked="#exportDataJSON"/>
+            <Button text="导出数据-Excel" onMouseClicked="#exportDataExcel"/>
+            <Button text="导出日志-CSV文件" onMouseClicked="#exportLogCSV"/>
+            <Button text="导出日志-JSON文件" onMouseClicked="#exportLogJSON"/>
+            <Button text="导出日志-Excel" onMouseClicked="#exportLogExcel"/>
+        </HBox>
+        <Label fx:id="recoveryTimeLabel"/>
+        <TabPane>
+            <Tab closable="false" text="采集的数据">
+                <VBox>
+                    <TableView fx:id="result_dataTableView">
+                        <columns>
+                            <TableColumn text="数据-键" minWidth="150">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="key"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="数据-值" minWidth="550">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="value"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            <Tab closable="false" text="日志数据">
+                <VBox>
+                    <TableView fx:id="result_logTableView">
+                        <columns>
+                            <TableColumn text="类型" minWidth="120">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="type"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="记录时间" minWidth="160">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="time"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="日志内容" minWidth="540">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="content"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </VBox>
+</FlowPane>

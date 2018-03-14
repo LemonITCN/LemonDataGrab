@@ -1,0 +1,26 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import org.controlsfx.control.ToggleSwitch?>
+<FlowPane xmlns:fx="http://javafx.com/fxml" fx:controller="net.lemonsoft.DataGrab.viewController.LoginViewController">
+    <ImageView fx:id="topLogoImage"/>
+    <HBox styleClass="formLineBox">
+        <Label text="账号："/>
+        <TextField fx:id="numberTextField"/>
+    </HBox>
+    <HBox styleClass="formLineBox">
+        <Label text="密码："/>
+        <PasswordField fx:id="passwordField" />
+    </HBox>
+    <HBox styleClass="formLineBox">
+        <Label text="记住账号密码："/>
+        <ToggleSwitch fx:id="rememberNumber"/>
+    </HBox>
+    <HBox styleClass="formLineBox">
+        <Button fx:id="loginButton" text="登录" onMouseClicked="#login"/>
+    </HBox>
+</FlowPane>

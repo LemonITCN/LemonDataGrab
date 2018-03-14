@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MainStage</title>
+    <link rel="stylesheet" href="mainStage.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+    <script type="text/javascript" src="../../url.js"></script>
+    <script type="text/javascript" src="../../system.js"></script>
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap.min.js"></script>
+    <script type="text/javascript" src="mainStage.js"></script>
+</head>
+<body>
+<div id="topControlPanel">
+    <button class="btn btn-success" id="addTaskButton"><i class="icon iconfont">&#xe623;</i><br/>添加任务</button>
+    <button class="btn btn-success" id="systemConfigButton"><i class="icon iconfont">&#xe625;</i><br/>系统配置</button>
+    <button class="btn btn-primary" id="pushNewNotification"><i class="icon iconfont">&#xe6aa;</i><br/>推送通知</button>
+    <button class="btn btn-warning" id="signOutButton"><i class="icon iconfont">&#xe61e;</i><br/>退出登录</button>
+</div>
+<div id="tabPanel">
+    <ul id="tabOption" class="nav nav-tabs">
+        <li class="active">
+            <a href="#tab_taskList" data-toggle="tab"><i class="icon iconfont">&#xe6da;</i>任务列表</a>
+        </li>
+        <li><a href="#tab_terminalList" data-toggle="tab"><i class="icon iconfont">&#xe605;</i>终端管理</a></li>
+        <li><a href="#tab_notificationHistory" data-toggle="tab"><i class="icon iconfont">&#xe64c;</i>推送历史</a></li>
+    </ul>
+    <div id="tabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="tab_taskList">
+            TASK LIST
+        </div>
+        <div class="tab-pane fade" id="tab_terminalList">
+            TERMINAL LIST
+        </div>
+        <div class="tab-pane fade" id="tab_notificationHistory">
+            PUSH NOTIFICATION HISTORY
+        </div>
+    </div>
+</div>
+</body>
+</html>

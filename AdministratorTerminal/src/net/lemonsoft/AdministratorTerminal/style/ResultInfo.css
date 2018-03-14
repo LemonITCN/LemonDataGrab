@@ -1,0 +1,22 @@
+.root {
+    -fx-max-width: 800px;
+    -fx-max-height: 500px;
+    -fx-pref-width: 800px;
+    -fx-pref-height: 480px;
+}
+
+.operateBox {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: baseline-left;
+    -fx-pref-width: 800px;
+}
+
+#rootTabPane{
+    -fx-pref-width: 800px;
+    -fx-pref-height: 500px;
+}
+
+#recoveryTimeLabel{
+    -fx-padding: 10px 20px;
+}

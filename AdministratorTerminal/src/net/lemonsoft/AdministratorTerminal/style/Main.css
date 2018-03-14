@@ -1,0 +1,30 @@
+.root {
+    -fx-max-width: 640px;
+    -fx-max-height: 480px;
+}
+
+.operateBox {
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+    -fx-alignment: baseline-left;
+    -fx-pref-width: 880px;
+}
+
+#user_signOutButton {
+    -fx-cursor: hand;
+}
+
+.pageBox {
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.pageBox .label{
+    -fx-pref-height: 30px;
+    -fx-padding: 0px 10px;
+}
+
+.pageBox * {
+    -fx-cursor: hand;
+}

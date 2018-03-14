@@ -1,0 +1,21 @@
+.root{
+    -fx-max-width: 640px;
+    -fx-max-height: 480px;
+}
+#userInfoBox{
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+    -fx-alignment: baseline-center;
+    -fx-pref-width: 880px;
+}
+
+#user_signOutButton{
+    -fx-cursor: hand;
+}
+
+#taskInfoBox{
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+    -fx-alignment: baseline-center;
+    -fx-pref-width: 880px;
+}

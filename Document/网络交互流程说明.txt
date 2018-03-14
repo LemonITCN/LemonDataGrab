@@ -1,0 +1,22 @@
+1. 客户端通过机器码等信息算出Identity（客户端身份码）
+2. 客户端通过HTTP向向服务器发起请求注册客户端，同时将Identity、客户端操作系统类型、硬件信息等参数提交，服务器根据生成一个UUID作为客户端ClientFingerprint返回给客户端，并存储至数据库，同时将Identity与此Identity绑定。
+3. 若客户端发送的Identity已经绑定到其他的ClientFingerprint，那么移除之前的Client（过期），将Identity绑定到当前的ClientFingerprint上。
+4. 客户端获取页面信息以及其他一些非用户相关的请求时，必须将ClientFingerprint发送给服务器。
+5. 当用户登录的时候，首先通过HTTP将用户的账号、密码以及ClientFingerprint等信息提交到服务器，服务器验证账号密码合法之后，生成一个UUID作为SessionFingerprint返回，并且存储到数据库中与ClientFingerprint绑定。（此时用户并不能与服务器进行通信操作，必须要通过长连接获取回执代码后激活SessionFingerprint才能使用，即第6条说明）
+6. 用户在登录之后，客户端必须通过MINA框架与服务器建立一个长连接，建立连接之后服务器会立刻生成一个UUID作为激活回执代码通过长连接发送给该客户端，客户端需要在180s之内通过HTTP请求向服务器发送此回执来激活SessionFingerprint。超时（180s）未使用的或已经被其他SessionFingerprint激活使用过的回执代码无法使用。
+7. 客户端在长连接断开后，用户将会重新被置为未激活状态，若想继续使用该SessionFingerprint，需要重复第6点说明操作来重新激活用户SessionFingerprint。
+8. 在需要用户身份相关的请求时（包括登录以及激活SessionFingerprint），客户端需向服务器发起的请求中除原有的参数外，还需要提交SessionFingerprint以及Sign数字签名。
+9. 任何HTTP请求，包括注册客户端等等请求，都需要发送客户端请求时的UNIX时间，服务器会对每个请求返回对应的客户端服务器延迟（单位：s）。
+10.客户端要求每60s向服务器发送一个心跳包，证明当前客户端是正常在线的。客户端若180s之内没有向服务器发送心跳包的话将会被视为与服务器断开连接，若此时再连接（继续使用当前SessionFingerprint）需要重复第6点说明中的操作来进行重新激活。
+
+
+设计目的：
+1. 可以保证客户端与服务器间的通信是双向稳定的，客户端通过HTTP上传，可以走TOMCAT提供的HTTP端口，增加上传的稳定性，MINA框架维持着高效的长连接服务，可以让服务器稳定、即时的向客户机推送命令以及其他信息。
+2. Sign标识可以增强请求的安全性，防止黑客在请求发送过程中拦截并篡改请求参数，或者恶意非法请求服务器资源。
+3. 心跳包机制可以保证每一个长连接都是有效的，这样可以防止无用的长连接不能及时断开而占用系统资源。
+4. SessionFingerprint和ClientFingerprint是LemonSafeProtocol的一部分，使用该协议不仅可以保证客户端与通信会话的安全性，还会为今后的大数据统计以及精准的一对一、一对多等消息推送打下良好的技术基础。
+
+
+其他说明：
+1. 在向服务器请求中，所有的SessionFingerprint参数使用的键均为：sess
+2. 所有的请求中必须包含当前客户端发送请求时的客户端UNIX时间戳，使用的参数键为：nut（Now Unix Time）

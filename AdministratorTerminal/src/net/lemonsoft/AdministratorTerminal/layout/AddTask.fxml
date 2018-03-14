@@ -1,0 +1,75 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="net.lemonsoft.AdministratorTerminal.viewController.AddTaskViewController">
+    <ScrollPane>
+        <content>
+            <VBox>
+                <VBox styleClass="lineBox">
+                    <Label text="任务名称:"/>
+                    <TextField fx:id="nameField" />
+                </VBox>
+                <VBox styleClass="lineBox">
+                    <Label text="对任务的描述信息:"/>
+                    <TextArea fx:id="descriptionTextArea"/>
+                </VBox>
+                <VBox styleClass="lineBox ">
+                    <Label text="任务首次发布时间:"/>
+                    <HBox styleClass="publishBox">
+                        <DatePicker fx:id="publishDatePicker"/>
+                        <ChoiceBox fx:id="publishHourChoiceBox" />
+                        <Label text="时"/>
+                        <ChoiceBox fx:id="publishMinuteChoiceBox" />
+                        <Label text="分"/>
+                        <ChoiceBox fx:id="publishSecondChoiceBox" />
+                        <Label text="秒"/>
+                    </HBox>
+                </VBox>
+                <VBox styleClass="lineBox ">
+                    <Label text="任务分发间隔时间:"/>
+                    <HBox styleClass="publishBox">
+                        <ChoiceBox fx:id="repeatDayChoiceBox" />
+                        <Label text="天"/>
+                        <ChoiceBox fx:id="repeatHourChoiceBox" />
+                        <Label text="小时"/>
+                        <ChoiceBox fx:id="repeatMinuteChoiceBox" />
+                        <Label text="分"/>
+                        <ChoiceBox fx:id="repeatSecondChoiceBox" />
+                        <Label text="秒"/>
+                    </HBox>
+                </VBox>
+                <VBox styleClass="lineBox ">
+                    <Label text="任务重复分发的次数:"/>
+                    <HBox styleClass="publishBox">
+                        <TextField fx:id="repeatCountTextField" text="0" />
+                        <Label text="次"/>
+                    </HBox>
+                </VBox>
+                <VBox styleClass="lineBox ">
+                    <Label text="任务的核心脚本代码:"/>
+                    <TextArea fx:id="executeCodeTextArea"/>
+                </VBox>
+                <VBox styleClass="lineBox ">
+                    <Label text="任务有效期:"/>
+                    <HBox styleClass="publishBox">
+                        <ChoiceBox fx:id="expiredDayChoiceBox" />
+                        <Label text="天"/>
+                        <ChoiceBox fx:id="expiredHourChoiceBox" />
+                        <Label text="小时"/>
+                        <ChoiceBox fx:id="expiredMinuteChoiceBox" />
+                        <Label text="分"/>
+                        <ChoiceBox fx:id="expiredSecondChoiceBox" />
+                        <Label text="秒"/>
+                    </HBox>
+                </VBox>
+                <VBox styleClass="lineBox ">
+                    <Label text="任务优先级别："/>
+                    <ChoiceBox fx:id="levelChoiceBox"/>
+                </VBox>
+                <HBox fx:id="commitBox">
+                    <Button text="立即添加任务" fx:id="addTaskButton" onMouseClicked="#addTask"/>
+                </HBox>
+            </VBox>
+        </content>
+    </ScrollPane>
+</FlowPane>

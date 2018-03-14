@@ -1,0 +1,70 @@
+.root {
+    -fx-max-width: 500px;
+    -fx-max-height: 480px;
+    -fx-pref-width: 500px;
+    -fx-pref-height: 480px;
+}
+
+.rootScrollPane {
+    -fx-pref-width: 580px;
+    -fx-pref-height: 480px;
+    -fx-background-color: green;
+}
+
+.operateBox {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: baseline-left;
+    -fx-pref-width: 560px;
+}
+
+.label {
+    -fx-pref-width: 100px;
+}
+
+.text-field {
+    -fx-pref-width: 400px;
+}
+
+.text-area {
+    -fx-pref-width: 400px;
+    -fx-pref-height: 100px;
+}
+
+#task_publishDatePicker, #task_expiredDatePicker {
+    -fx-pref-width: 120px;
+}
+
+.choice-box {
+    -fx-pref-width: 60px;
+}
+
+.itemLabel {
+    -fx-pref-width: 16px;
+}
+
+.submitBox{
+    -fx-alignment: center;
+    -fx-pref-height: 60px;
+}
+#submitButton{
+    -fx-pref-width: 400px;
+    -fx-pref-height: 40px;
+}
+
+
+.taskStateLine{
+    -fx-pref-width: 500px;
+    -fx-pref-height: 40px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+    -fx-padding: 0px 20px;
+}
+.taskStateLine .icon{
+    -fx-pref-height: 30px;
+    -fx-pref-width: 30px;
+}
+.taskStateLine .label{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 20px;
+}

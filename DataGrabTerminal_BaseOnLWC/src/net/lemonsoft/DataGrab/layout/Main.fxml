@@ -1,0 +1,43 @@
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<FlowPane xmlns:fx="http://javafx.com/fxml" fx:controller="net.lemonsoft.DataGrab.viewController.MainViewController">
+    <TableView fx:id="rootTableView">
+        <columns>
+            <TableColumn text="Task Fingerprint" minWidth="220">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fingerprint"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Task Name" minWidth="420">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Publish Time" minWidth="140">
+                <cellValueFactory>
+                    <PropertyValueFactory property="publishTime"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="State" minWidth="80">
+                <cellValueFactory>
+                    <PropertyValueFactory property="state"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox fx:id="userInfoBox">
+        <Label fx:id="user_idLabel" text="用户信息加载中"/>
+        <Label fx:id="user_nameLabel"/>
+        <Label fx:id="user_userGroupLabel"/>
+        <Label fx:id="user_scoreLabel"/>
+        <Button fx:id="user_signOutButton" text="注销登录" onMouseClicked="#signOut"/><!-- 注销按钮 -->
+    </HBox>
+    <HBox fx:id="taskInfoBox">
+        <Label fx:id="task_infoLabel"/>
+    </HBox>
+</FlowPane>

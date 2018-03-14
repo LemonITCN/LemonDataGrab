@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AddTask Stage</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" href="addTaskStage.css">
+    <script type="text/javascript" src="../../url.js"></script>
+    <script type="text/javascript" src="../../system.js"></script>
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript" src="../../jquery.bootstrap-touchspin.min.js"></script>
+    <script type="text/javascript" src="addTaskStage.js"></script>
+</head>
+<body>
+<div class='form-group'><label for='taskNameField' class='col-sm-2 control-label'>任务名称：</label>
+    <div class='col-sm-10'><input type='text' class='form-control' id='taskNameField'
+                                  placeholder='请输入任务的名称'></div>
+</div>
+<div class='form-group'><label for='taskDescriptionTextArea' class='col-sm-2 control-label'>对任务的描述信息：</label>
+    <div class='col-sm-10'><textarea class='form-control' id='taskDescriptionTextArea'
+                                     placeholder="对任务的简单描述" rows="3"></textarea></div>
+</div>
+<div class='form-group'><label for='taskPublishTimeField' class='col-sm-2 control-label'>任务的发布时间：</label>
+    <div class='col-sm-10 input-append date form_datetime'>
+        <input type='text' class='form-control' id='taskPublishTimeField' placeholder="任务发布时间" readonly>
+        <span class="add-on"><i class="icon-remove"></i></span>
+        <span class="add-on"><i class="icon-th"></i></span>
+    </div>
+</div>
+<label class='col-sm-2 control-label'>任务分发间隔时间：</label>
+<div class='form-group'>
+    <div class='col-xs-6'>
+        <input id="distributeRepeatIntervalDayField" type="text" value="7" class="spinner spinnerDay">
+    </div>
+    <div class='col-xs-6'>
+        <input id="distributeRepeatIntervalHourField" type="text" value="0" class="spinner spinnerHour">
+    </div>
+    <div class='col-xs-6'>
+        <input id="distributeRepeatIntervalMinuteField" type="text" value="0" class="spinner spinnerMinute">
+    </div>
+    <div class='col-xs-6'>
+        <input id="distributeRepeatIntervalSecondField" type="text" value="0" class="spinner spinnerSecond">
+    </div>
+</div>
+<div class='form-group topMargin'><label for='distributeRepeatCountField' class='col-xs-12 control-label'><br>任务重复分发的次数：</label>
+    <div class='col-xs-7'>
+        <input id="distributeRepeatCountField" type="text" value="0" class="spinner spinnerTime">
+    </div>
+</div>
+<div class='form-group topMargin'>
+    <label for='executeScriptTextArea' class='col-xs-12 control-label'><br>任务的核心脚本代码：</label>
+    <div class='col-sm-10'><textarea class='form-control' id='executeScriptTextArea'
+                                     placeholder="任务的采集脚本代码" rows="10"></textarea></div>
+</div>
+<div class='form-group'>
+    <label class='col-xs-12 control-label'>任务过期时长：</label>
+    <div class='col-xs-6'>
+        <input id="expiredDayField" type="text" value="7" class="spinner spinnerDay">
+    </div>
+    <div class='col-xs-6'>
+        <input id="expiredHourField" type="text" value="0" class="spinner spinnerHour">
+    </div>
+    <div class='col-xs-6'>
+        <input id="expiredMinuteField" type="text" value="0" class="spinner spinnerMinute">
+    </div>
+    <div class='col-xs-6'>
+        <input id="expiredSecondField" type="text" value="0" class="spinner spinnerSecond">
+    </div>
+</div>
+
+<label for='theTopSwitch' class='col-xs-12 control-label'><br>任务是否需要提权优先：</label>
+<div class='form-group col-xs-7'>
+    <input id="theTopSwitch" type="checkbox" class="bootstrap-switch col-xs-12">
+</div>
+<button class="form-control btn btn-block btn-success btn-lg" id="addTaskButton">立即添加任务</button>
+</body>
+</html>

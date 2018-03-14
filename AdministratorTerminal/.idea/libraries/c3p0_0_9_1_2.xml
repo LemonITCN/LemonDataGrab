@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="c3p0-0.9.1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-collections-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-dbutils-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/controlsfx-8.40.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/ezmorph-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/fluent-hc-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/gson-2.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/httpclient-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/httpclient-cache-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/httpclient-win-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/httpcore-4.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/httpmime-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/jna-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/jna-platform-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/json-lib-2.1-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/LemonWebController.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/mina-core-2.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/poi-3.6-20091214.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/slf4j-api-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/sqlite-jdbc-3.8.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/yuicompressor-2.4.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/AdministratorTerminal/library/sqlite-jdbc-3.8.11.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>

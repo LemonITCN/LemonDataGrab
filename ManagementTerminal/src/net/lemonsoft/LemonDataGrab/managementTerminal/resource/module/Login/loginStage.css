@@ -1,0 +1,13 @@
+#headerImage{
+    width: 100%;
+}
+body{
+    background: #EEEEEE;
+}
+#loginButton{
+    width: 80%;
+    margin: 26px auto 0px;
+}
+.loginPanel{
+    padding: 15px;
+}

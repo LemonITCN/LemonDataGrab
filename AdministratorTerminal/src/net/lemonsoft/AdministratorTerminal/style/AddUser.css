@@ -1,0 +1,32 @@
+.root {
+    -fx-pref-width: 340px;
+    -fx-pref-height: 310px;
+    -fx-padding: 20px;
+}
+.formLineBox{
+    -fx-pref-width: 340px;
+    -fx-padding: 10px;
+    -fx-alignment: baseline-left;
+}
+.formLineBox .label{
+    -fx-pref-height: 26px;
+    -fx-pref-width: 80px;
+}
+.formLineBox .text-field,.choice-box{
+    -fx-pref-height: 36px;
+    -fx-pref-width: 240px;
+}
+#user_userGroupDescriptionLabel{
+    -fx-pref-width: 340px;
+    -fx-pref-height: 40px;
+}
+.submitLineBox{
+    -fx-pref-width: 340px;
+    -fx-alignment: baseline-center;
+    -fx-padding: 30px 0px 0px 0px;
+}
+.submitLineBox .button{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+}

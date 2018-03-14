@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-collections-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-dbutils-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/controlsfx-8.40.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/ezmorph-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/fluent-hc-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/gson-2.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/httpclient-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/httpclient-cache-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/httpclient-win-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/httpcore-4.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/httpmime-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/jna-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/jna-platform-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/json-lib-2.1-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/LemonWebController.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/mina-core-2.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/slf4j-api-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/sqlite-jdbc-3.8.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/yuicompressor-2.4.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/net/lemonsoft/DataGrab/library/sqlite-jdbc-3.8.11.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>

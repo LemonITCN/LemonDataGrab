@@ -1,0 +1,30 @@
+.root {
+    -fx-pref-width: 320px;
+    -fx-pref-height: 340px;
+}
+
+#topLogoImage{
+    -fx-image: url("../resource/datagrabHeaderImage.png");
+}
+
+.formLineBox {
+    -fx-padding: 10px;
+    -fx-pref-width: 320px;
+    -fx-spacing: 10px;
+    -fx-alignment: baseline-center;
+}
+
+.formLineBox .label{
+    -fx-pref-height: 22px;
+}
+
+.formLineBox .text-field {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 240px;
+}
+
+#loginButton{
+    -fx-pref-height: 40px;
+    -fx-pref-width: 240px;
+    -fx-cursor: hand;
+}
